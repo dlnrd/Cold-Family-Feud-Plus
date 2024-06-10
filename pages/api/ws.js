@@ -216,8 +216,9 @@ const ioHandler = (req, res) => {
             let loadGameData = loadGame.addGameKeys(message.data);
 
             let game = rooms[message.room].game;
-            game.teams[0].points = 0;
-            game.teams[1].points = 0;
+            for(let i = 0; i < game.teams.length; i++) {
+              game.teams[i].points = 0;
+            }
             game.round = 0;
             game.title = true;
             game.rounds = loadGameData.rounds;

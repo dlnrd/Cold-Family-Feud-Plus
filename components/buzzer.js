@@ -94,11 +94,11 @@ export default function Buzzer(props) {
         if (json.data.title_text === "Change Me") {
           json.data.title_text = t("Change Me");
         }
-        if (json.data.teams[0].name === "Team 1") {
-          json.data.teams[0].name = `${t("team")} ${t("number", { count: 1 })}`;
-        }
-        if (json.data.teams[1].name === "Team 2") {
-          json.data.teams[1].name = `${t("team")} ${t("number", { count: 2 })}`;
+        for(let i = 1; i <= game.teams.length; i++) {
+          let teamComparison = "Team" + i;
+          if (json.data.teams[i].name === teamComparison) {
+            json.data.teams[i].name = `${t("team")} ${t("number", { count: i })}`;
+          }
         }
         props.setGame(json.data);
       } else if (json.action === "buzzed") {

@@ -744,8 +744,9 @@ export default function Admin(props) {
                       game.round = parseInt(e.target.value);
                       game.is_final_round = false;
                       game.is_final_second = false;
-                      game.teams[0].mistakes = 0;
-                      game.teams[1].mistakes = 0;
+                      for(let i = 0; i < game.teams.length; i++) {
+                        game.teams[i].mistakes = 0;
+                      }
                       game.title = false;
                       props.setGame((prv) => ({ ...prv }));
                       setPointsGivin({
@@ -793,8 +794,9 @@ export default function Admin(props) {
                       game.title = false;
                       game.is_final_round = false;
                       game.is_final_second = false;
-                      game.teams[0].mistakes = 0;
-                      game.teams[1].mistakes = 0;
+                      for(let i = 0; i < game.teams.length; i++) {
+                        game.teams[i].mistakes = 0;
+                      }
                       if (game.round < game.rounds.length - 1) {
                         game.round = game.round + 1;
                       }
