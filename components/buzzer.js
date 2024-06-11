@@ -94,10 +94,10 @@ export default function Buzzer(props) {
         if (json.data.title_text === "Change Me") {
           json.data.title_text = t("Change Me");
         }
-        for(let i = 1; i <= game.teams.length; i++) {
-          let teamComparison = "Team" + i;
+        for(let i = 0; i <= game.teams.length; i++) {
+          let teamComparison = "Team" + (i + 1);
           if (json.data.teams[i].name === teamComparison) {
-            json.data.teams[i].name = `${t("team")} ${t("number", { count: i })}`;
+            json.data.teams[i].name = `${t("team")} ${t("number", { count: (i + 1) })}`;
           }
         }
         props.setGame(json.data);
