@@ -214,7 +214,6 @@ export default function Home() {
               error={error}
             />
           </div>
-          <Footer />
         </div>
       );
     }
