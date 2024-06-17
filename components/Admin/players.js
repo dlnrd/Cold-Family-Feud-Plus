@@ -6,14 +6,16 @@ import { useState, useEffect, useRef } from "react";
 export default function Players(props) {
   let game = props.game;
   const { i18n, t } = useTranslation();
-  let team1 = [];
-  let team2 = [];
+  let teams = [];
+  for (let i = 0; i < game.teams.length; i++) {
+    teams.push([]);
+  }
 
   if (game.registeredPlayers) {
     for (const [id, player] of Object.entries(game.registeredPlayers)) {
       if (player.hasOwnProperty("team")) {
         let content = { id: id, name: player.name };
-        player.team === 0 ? team1.push(content) : team2.push(content);
+        teams[player.team].push(content);
       }
     }
   }
@@ -75,7 +77,7 @@ export default function Players(props) {
         <div class="flex-grow">
           <p class="text-foreground">{game.teams[0].name}</p>
           <hr />
-          {teamSection(team1)}
+          {teamSection(teams[0])}
         </div>
         {/* seperator */}
         <div class="bg-secondary-300 border h-full" />
@@ -83,7 +85,7 @@ export default function Players(props) {
         <div class="flex-grow">
           <p class="text-foreground">{game.teams[1].name}</p>
           <hr />
-          {teamSection(team2)}
+          {teamSection(teams[1])}
         </div>
       </div>
     </div>
