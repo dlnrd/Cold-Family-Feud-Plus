@@ -49,7 +49,7 @@ export default function Title(props) {
             </p>
           </div>
           <div className="flex flex-row text-center">
-            {[0, 1, 2].map(function(n) {
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(function(n) {
               return (
                 <div className="flex-grow">
                   <p className="text-4xl flex-grow text-foreground font-bold">

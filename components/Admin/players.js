@@ -87,13 +87,69 @@ export default function Players(props) {
           <hr />
           {teamSection(teams[1])}
         </div>
-        {/* seperator */}
+        {/* separator */}
         <div class="bg-secondary-300 border h-full" />
         {/* team 3 section */}
         <div class="flex-grow">
           <p class="text-foreground">{game.teams[2].name}</p>
           <hr />
           {teamSection(teams[2])}
+        </div>
+        {/* separator */}
+        <div class="bg-secondary-300 border h-full" />
+        {/* team 4 section */}
+        <div class="flex-grow">
+          <p class="text-foreground">{game.teams[3].name}</p>
+          <hr />
+          {teamSection(teams[3])}
+        </div>
+        {/* separator */}
+        <div class="bg-secondary-300 border h-full" />
+        {/* team 5 section */}
+        <div class="flex-grow">
+          <p class="text-foreground">{game.teams[4].name}</p>
+          <hr />
+          {teamSection(teams[4])}
+        </div>
+        {/* separator */}
+        <div class="bg-secondary-300 border h-full" />
+        {/* team 6 section */}
+        <div class="flex-grow">
+          <p class="text-foreground">{game.teams[5].name}</p>
+          <hr />
+          {teamSection(teams[5])}
+        </div>
+        {/* separator */}
+        <div class="bg-secondary-300 border h-full" />
+        {/* team 7 section */}
+        <div class="flex-grow">
+          <p class="text-foreground">{game.teams[6].name}</p>
+          <hr />
+          {teamSection(teams[6])}
+        </div>
+        {/* separator */}
+        <div class="bg-secondary-300 border h-full" />
+        {/* team 8 section */}
+        <div class="flex-grow">
+          <p class="text-foreground">{game.teams[7].name}</p>
+          <hr />
+          {teamSection(teams[7])}
+        </div>
+        {/* separator */}
+        <div class="bg-secondary-300 border h-full" />
+        {/* team 9 section */}
+        <div class="flex-grow">
+          <p class="text-foreground">{game.teams[8].name}</p>
+          <hr />
+          {teamSection(teams[8])}
+        </div>
+        {/* separator */}
+        <div class="bg-secondary-300 border h-full" />
+        {/* team 10 section */}
+        <div class="flex-grow">
+          <p class="text-foreground">{game.teams[9].name}</p>
+          <hr />
+          {teamSection(teams[9])}
         </div>
       </div>
     </div>

@@ -115,6 +115,41 @@ const ioHandler = (req, res) => {
           points: 0,
           mistakes: 0,
         },
+        {
+          name: "Team 4",
+          points: 0,
+          mistakes: 0,
+        },
+        {
+          name: "Team 5",
+          points: 0,
+          mistakes: 0,
+        },
+        {
+          name: "Team 6",
+          points: 0,
+          mistakes: 0,
+        },
+        {
+          name: "Team 7",
+          points: 0,
+          mistakes: 0,
+        },
+        {
+          name: "Team 8",
+          points: 0,
+          mistakes: 0,
+        },
+        {
+          name: "Team 9",
+          points: 0,
+          mistakes: 0,
+        },
+        {
+          name: "Team 10",
+          points: 0,
+          mistakes: 0,
+        },
       ],
       title: true,
       title_text: "",

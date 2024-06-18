@@ -40,12 +40,12 @@ export default function Round(props) {
   return (
     <div className="w-auto flex flex-col space-y-1 items-center">
       <div className="flex flex-row justify-around space-x-2 h-28">
-        <RoundPointTally points={props.game.teams[0].points} />
+        {/* <RoundPointTally points={props.game.teams[0].points} /> */}
         <RoundPointTally
           points={props.game.point_tracker[props.game.round]}
           fontWeight="bold"
         />
-        <RoundPointTally points={props.game.teams[1].points} />
+        {/* <RoundPointTally points={props.game.teams[1].points} /> */}
       </div>
 
       <div className="flex flex-row justify-center">

@@ -253,7 +253,7 @@ export default function Buzzer(props) {
                 </h1>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <button
+                {/* <button
                   className="hover:shadow-md rounded-md bg-primary-200 p-5"
                   onClick={() => {
                     cookieCutter.set("session", `${props.room}:${props.id}:0`);
@@ -261,28 +261,19 @@ export default function Buzzer(props) {
                   }}
                 >
                   {game.teams[0].name}
-                </button>
-
+                </button> */}
+                {[...Array(10)].map((_, i) => (
                 <button
+                    key={i}
                   className="hover:shadow-md rounded-md bg-primary-200 p-5"
                   onClick={() => {
-                    cookieCutter.set("session", `${props.room}:${props.id}:1`);
-                    props.setTeam(1);
+                      cookieCutter.set("session", `${props.room}:${props.id}:${i}`);
+                      props.setTeam(i);
                   }}
                 >
-                  {game.teams[1].name}
+                    {game.teams[i].name}
                 </button>
-                  {/* Start of hell */}
-                <button
-                  className="hover:shadow-md rounded-md bg-primary-200 p-5"
-                  onClick={() => {
-                    cookieCutter.set("session", `${props.room}:${props.id}:1`);
-                    props.setTeam(2);
-                  }}
-                >
-                  {game.teams[2].name}
-                </button>
-                  {/* Start of hell */}
+                ))}
               </div>
               <div className="flex flex-row justify-center">
                 <button
