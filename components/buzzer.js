@@ -253,15 +253,6 @@ export default function Buzzer(props) {
                 </h1>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                {/* <button
-                  className="hover:shadow-md rounded-md bg-primary-200 p-5"
-                  onClick={() => {
-                    cookieCutter.set("session", `${props.room}:${props.id}:0`);
-                    props.setTeam(0);
-                  }}
-                >
-                  {game.teams[0].name}
-                </button> */}
                 {[...Array(10)].map((_, i) => (
                 <button
                   key={i}

@@ -151,9 +151,9 @@ export default function Game(props) {
           <Round game={game} />
           <QuestionBoard round={game.rounds[game.round]} />
           <div className="flex flex-row justify-around">
-            <TeamName game={game} team={0} />
-            <TeamName game={game} team={1} />
-            <TeamName game={game} team={2} />
+            {[...Array(10)].map((_, i) => (
+              <TeamName game={game} team={i} />
+            ))}
           </div>
           {/* TODO: ADD ALL TEAMS SCOREBOARD HERE */}
           {/* <RoundPointTally points={props.game.teams[0].points} /> */}
