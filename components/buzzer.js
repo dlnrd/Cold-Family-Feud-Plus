@@ -171,8 +171,11 @@ export default function Buzzer(props) {
                 </div>
                 {/* END Buzzer Section TODO replace with function*/}
                 <div className="flex flex-row justify-between min-w-full space-x-3">
-                  <TeamName game={game} team={0} />
+                  {/* <TeamName game={game} team={0} />
                   <TeamName game={game} team={1} />
+                  <TeamName game={game} team={2} /> */}
+                  {/* TODO: ADD USERS SCORE 
+                  <TeamName game={game} team={props.game.teams} /> */}
                 </div>
                 <div className="">
                   <QuestionBoard round={game.rounds[game.round]} />
@@ -184,6 +187,8 @@ export default function Buzzer(props) {
                         key={i}
                         className="flex flex-row space-x-2 md:text-2xl lg:text-2xl text-1xl"
                       >
+                        {/* TODO: ADD USERS TEAM
+                        <TeamName game={game} team={game.teams[game.registeredPlayers[x.id].team].name} /> */}
                         <div className="flex-grow">
                           <p className="truncate w-20 text-left text-foreground">
                             {t("number", { count: i + 1 })}.{" "}

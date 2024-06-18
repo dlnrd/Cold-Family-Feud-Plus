@@ -942,12 +942,9 @@ export default function Admin(props) {
                   </div>
 
                   {/* BUZZERS AND PLAYERS */}
-                  <div className="grid grid-cols-2 gap-4 p-5">
+                  {/* <div className="grid grid-cols-2 gap-4 p-5"> */}
                     <h1 className="text-2xl capitalize text-foreground">
                       {t("Buzzer Order")}
-                    </h1>
-                    <h1 className="text-2xl capitalize text-foreground">
-                      {t("players")}
                     </h1>
                     <div className="border-4 h-48 overflow-y-scroll rounded p-5 text-center">
                       <div className="flex flex-col  h-full space-y-2 justify-between">
@@ -1004,8 +1001,11 @@ export default function Admin(props) {
                         </div>
                       </div>
                     </div>
+                    <h1 className="text-2xl capitalize text-foreground">
+                          {t("players")}
+                        </h1>
                     <Players game={game} ws={ws} room={props.room} />
-                  </div>
+                  {/* </div> */}
                 </div>
               ) : (
                   // FINAL ROUND
