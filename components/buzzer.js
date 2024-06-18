@@ -174,7 +174,7 @@ export default function Buzzer(props) {
                   {/* <TeamName game={game} team={0} />
                   <TeamName game={game} team={1} />
                   <TeamName game={game} team={2} /> */}
-                  {/* TODO: ADD USERS SCORE 
+                  {/* TODO: ADD USERS SCORE
                   <TeamName game={game} team={props.game.teams} /> */}
                 </div>
                 <div className="">
@@ -264,14 +264,14 @@ export default function Buzzer(props) {
                 </button> */}
                 {[...Array(10)].map((_, i) => (
                 <button
-                    key={i}
+                  key={i}
                   className="hover:shadow-md rounded-md bg-primary-200 p-5"
                   onClick={() => {
-                      cookieCutter.set("session", `${props.room}:${props.id}:${i}`);
-                      props.setTeam(i);
+                    cookieCutter.set("session", `${props.room}:${props.id}:${i}`);
+                    props.setTeam(i);
                   }}
                 >
-                    {game.teams[i].name}
+                  {game.teams[i].name}
                 </button>
                 ))}
               </div>

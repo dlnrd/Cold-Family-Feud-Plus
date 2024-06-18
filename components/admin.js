@@ -702,7 +702,7 @@ export default function Admin(props) {
                 value={game.teams[2].points}
               ></input>
             </div>
-<div className="w-80 flex-row items-center space-x-1">
+            <div className="w-80 flex-row items-center space-x-1">
               {/* TEAM 4 NAME CHANGER */}
               <input
                 className="border-4 rounded text-3xl w-52 bg-secondary-500 text-foreground p-1 placeholder-secondary-900"
