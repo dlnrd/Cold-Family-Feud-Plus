@@ -153,6 +153,7 @@ export default function Game(props) {
           <div className="flex flex-row justify-around">
             <TeamName game={game} team={0} />
             <TeamName game={game} team={1} />
+            <TeamName game={game} team={2} />
           </div>
           {/* TODO: ADD ALL TEAMS SCOREBOARD HERE */}
           {/* <RoundPointTally points={props.game.teams[0].points} /> */}

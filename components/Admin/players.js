@@ -87,6 +87,14 @@ export default function Players(props) {
           <hr />
           {teamSection(teams[1])}
         </div>
+        {/* seperator */}
+        <div class="bg-secondary-300 border h-full" />
+        {/* team 3 section */}
+        <div class="flex-grow">
+          <p class="text-foreground">{game.teams[2].name}</p>
+          <hr />
+          {teamSection(teams[2])}
+        </div>
       </div>
     </div>
   );

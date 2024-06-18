@@ -674,6 +674,34 @@ export default function Admin(props) {
                 value={game.teams[1].points}
               ></input>
             </div>
+            <div className="w-80 flex-row items-center space-x-1">
+              {/* TEAM 3 NAME CHANGER */}
+              <input
+                className="border-4 rounded text-3xl w-52 bg-secondary-500 text-foreground p-1 placeholder-secondary-900"
+                onChange={debounce((e) => {
+                  game.teams[2].name = e.target.value;
+                  props.setGame((prv) => ({ ...prv }));
+                  send({ action: "data", data: game });
+                })}
+                placeholder={t("Team Name")}
+                defaultValue={game.teams[2].name}
+              ></input>
+              {/* TEAM 3 POINTS CHANGER */}
+              <input
+                type="number"
+                min="0"
+                required
+                className="border-4 rounded text-center text-3xl w-20 bg-secondary-500 text-foreground p-1 placeholder-secondary-900"
+                onChange={(e) => {
+                  let number = parseInt(e.target.value);
+                  isNaN(number) ? (number = 0) : null;
+                  game.teams[2].points = number;
+                  props.setGame((prv) => ({ ...prv }));
+                  send({ action: "data", data: game });
+                }}
+                value={game.teams[2].points}
+              ></input>
+            </div>
           </div>
           <p className="text-xl text-failure-700">{error}</p>
         </div>
@@ -849,6 +877,14 @@ export default function Admin(props) {
                     setGame={props.setGame}
                     send={send}
                     team={1}
+                    setPointsGivin={setPointsGivin}
+                    pointsGivin={pointsGivin}
+                  />
+                  <TeamControls
+                    game={game}
+                    setGame={props.setGame}
+                    send={send}
+                    team={2}
                     setPointsGivin={setPointsGivin}
                     pointsGivin={pointsGivin}
                   />

@@ -110,6 +110,11 @@ const ioHandler = (req, res) => {
           points: 0,
           mistakes: 0,
         },
+        {
+          name: "Team 3",
+          points: 0,
+          mistakes: 0,
+        },
       ],
       title: true,
       title_text: "",

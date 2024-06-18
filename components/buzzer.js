@@ -272,6 +272,17 @@ export default function Buzzer(props) {
                 >
                   {game.teams[1].name}
                 </button>
+                  {/* Start of hell */}
+                <button
+                  className="hover:shadow-md rounded-md bg-primary-200 p-5"
+                  onClick={() => {
+                    cookieCutter.set("session", `${props.room}:${props.id}:1`);
+                    props.setTeam(2);
+                  }}
+                >
+                  {game.teams[2].name}
+                </button>
+                  {/* Start of hell */}
               </div>
               <div className="flex flex-row justify-center">
                 <button
