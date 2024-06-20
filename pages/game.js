@@ -8,6 +8,8 @@ import Final from "components/final";
 import "tailwindcss/tailwind.css";
 import cookieCutter from "cookie-cutter";
 
+import { RoundPointTally2 } from "components/round";
+
 let timerInterval = null;
 
 export default function Game(props) {
@@ -152,11 +154,15 @@ export default function Game(props) {
           <QuestionBoard round={game.rounds[game.round]} />
           <div className="flex flex-row justify-around">
             {[...Array(10)].map((_, i) => (
-              <TeamName game={game} team={i} />
+              <div>
+                <RoundPointTally2 points={game.teams[i].points} />
+                <div class="py-1" />
+                <TeamName game={game} team={i} />
+
+              </div>
             ))}
           </div>
           {/* TODO: ADD ALL TEAMS SCOREBOARD HERE */}
-          {/* <RoundPointTally points={props.game.teams[0].points} /> */}
         </div>
       );
     }

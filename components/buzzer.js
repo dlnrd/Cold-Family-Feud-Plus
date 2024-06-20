@@ -140,7 +140,7 @@ export default function Buzzer(props) {
           <>
             {!game.title && !game.is_final_round ? (
               <div className="pt-8 flex flex-col space-y-5">
-                <Round game={game} />
+                {/* <Round game={game} /> */}
 
                 {/* Buzzer Section TODO replace with function*/}
                 <div
@@ -190,7 +190,7 @@ export default function Buzzer(props) {
                         {/* TODO: ADD USERS TEAM
                         <TeamName game={game} team={game.teams[game.registeredPlayers[x.id].team].name} /> */}
                         <div className="flex-grow">
-                          <p className="truncate w-20 text-left text-foreground">
+                          <p className="w-50 text-left text-foreground">
                             {t("number", { count: i + 1 })}.{" "}
                             {game.registeredPlayers[x.id].name}
                           </p>

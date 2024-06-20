@@ -37,7 +37,7 @@ function TeamControls(props) {
     <>
       <button
         disabled={props.pointsGivin.state}
-        className={`border-4 text-2xl ${props.pointsGivin.color} rounded p-10 ${props.pointsGivin.textColor}`}
+        className={`border-4 text-2xl ${props.pointsGivin.color} rounded p-5 ${props.pointsGivin.textColor}`}
         onClick={() => {
           props.game.teams[props.team].points =
             props.game.point_tracker[props.game.round] +
@@ -51,11 +51,11 @@ function TeamControls(props) {
           props.send({ action: "data", data: props.game });
         }}
       >
-        {t("team")} {t("number", { count: props.team + 1 })}:{" "}
+        {t("T")}{t("number", { count: props.team + 1 })}:{" "}
         {props.game.teams[props.team].name} {t("Gets Points")}
       </button>
       <button
-        className="border-4 bg-failure-500 text-2xl rounded p-10 text-foreground"
+        className="border-4 bg-failure-500 text-2xl rounded p-5 text-foreground"
         onClick={() => {
           if (props.game.teams[props.team].mistakes < 3)
             props.game.teams[props.team].mistakes++;
@@ -67,7 +67,7 @@ function TeamControls(props) {
           });
         }}
       >
-        {t("team")} {t("number", { count: props.team + 1 })}:{" "}
+        {t("T")}{t("number", { count: props.team + 1 })}:{" "}
         {props.game.teams[props.team].name} {t("mistake")}
       </button>
     </>
@@ -809,7 +809,7 @@ export default function Admin(props) {
                 </div>
 
                 {/* GETS POINTS MISTAKE */}
-                <div className="grid grid-rows-2 grid-flow-col gap-5">
+                <div className="grid grid-rows-4 grid-flow-col gap-5 ">
                 {[...Array(10)].map((_, i) => (
                   <TeamControls
                     game={game}
